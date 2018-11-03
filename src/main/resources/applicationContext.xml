@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<beans>
+    <!--value属性-->
+    <bean id="animal" class="phz.springframework.test.Cat">
+        <property name="name">
+            <value>kitty</value>
+        </property>
+    </bean>
+
+    <!--ref属性-->
+    <bean id="animalSay" class="phz.springframework.test.AnimalSay">
+        <property name="animal">
+            <ref bean="animal"/>
+        </property>
+    </bean>
+
+    <!--list属性-->
+
+    <!--map属性 例子-->
+    <bean id="test" class="Test">
+    <property name="testMap">
+        <map>
+            <entry key="key1">
+                <value>value1</value>
+            </entry>
+            <entry key="key2" value = "value2">
+            </entry>
+            <entry key="key3">
+                <value>value3</value>
+            </entry>
+        </map>
+    </property>
+    </bean>
+</beans>
